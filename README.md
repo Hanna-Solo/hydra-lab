@@ -41,27 +41,6 @@ Wordlists included in this repo are for educational practice only.
 
 Hydra is a powerful tool — use responsibly and legally.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 🔐 Hydra Lab — Brute Force Attack in an Isolated Environment
 
 This repository documents my practice with *Hydra, a password-cracking tool used for ethical security testing in a **fully isolated cybersecurity lab*.
